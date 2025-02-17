@@ -1,11 +1,15 @@
-import styles from "@/app/(auth)/_styles/main.module.css";
+import styles from "@/app/(beforeLogin)/_styles/main.module.css";
+import zLogo from "../../../../public/zlogo.png";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
-const Page = () => {
+const Main = () => {
   return (
     <>
-      <div className={styles.left}>LOGO</div>
+      <div className={styles.left}>
+        <Image src={zLogo} alt="logo" />
+      </div>
       <div className={styles.right}>
         <h1>지금 일어나고 있는 일</h1>
         <h2>지금 가입하세요.</h2>
@@ -13,7 +17,7 @@ const Page = () => {
           계정 만들기
         </Link>
         <h3>이미 트위터에 가입하셨나요?</h3>
-        <Link href="/i/flow/login" className={styles.login}>
+        <Link href="/login" className={styles.login}>
           로그인
         </Link>
       </div>
@@ -21,4 +25,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Main;

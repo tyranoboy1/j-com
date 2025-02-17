@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import style from "@/app/(auth)/_styles/main.module.css";
+import styles from "@/app/(beforeLogin)/_styles/main.module.css";
 
 interface ILayout {
   children: ReactNode;
@@ -8,7 +8,7 @@ interface ILayout {
 
 const Layout = ({ children, modal }: ILayout) => {
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       {children}
       {modal}
     </div>
